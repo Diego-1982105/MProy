@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Sistema de Etiquetado</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    
+</head>
+<body>
+    <header>
+        <button id="back-button">
+            <i class="fas fa-arrow-left"></i> Regresar
+        </button>
+        <h1>Sistema de Etiquetado</h1>
+    </header>
+
+    <main>
+        <section class="filter-section">
+            <h2>Filtrar Etiquetas</h2>
+            <form id="filter-form">
+                <label for="cell">Celda de Ensamble:</label>
+                <select id="cell" name="cell" required>
+                    <option value="" disabled selected>Seleccione una celda</option>
+                    <option value="celda1">Celda 1</option>
+                    <option value="celda2">Celda 2</option>
+                
+                </select>
+
+                <label for="start-date">Fecha Inicial:</label>
+                <input type="date" id="start-date" name="start-date" required>
+
+                <label for="end-date">Fecha Final:</label>
+                <input type="date" id="end-date" name="end-date" required>
+
+                <button type="submit">Filtrar</button>
+            </form>
+        </section>
+
+        <section class="results-section">
+            <h2>Resultados</h2>
+            <table id="results-table">
+                <thead>
+                    <tr>
+                        <th>Etiqueta</th>
+                        <th>Celda</th>
+                        <th># de parte</th>
+                        <th>Cantidad</th>
+                        <th>Pieza por caja</th>
+                        <th>Empaque</th>
+                        <th>Impresora</th>
+                        <th>Turno</th>
+                        <th>Fecha</th>
+                        <th>Hora</th>
+                        
+                    </tr>
+                    <tbody>
+                        <tr>
+                            <td>173957652</td>
+                            <td>W200SUB2</td>
+                            <td>41048</td>
+                            <td>55</td>
+                            <td>CAJA</td>
+                            <td>E</td>
+                            <td>MMXPR1286</td>
+                            <td>T1</td>
+                            <td>07/01/24</td>
+                            <td>16:45:14</td>
+                    </tr>
+                    <tr>
+                        <td>173957652</td>
+                        <td>W200SUB2</td>
+                        <td>41048</td>
+                        <td>55</td>
+                        <td>CAJA</td>
+                        <td>E</td>
+                        <td>MMXPR1286</td>
+                        <td>T1</td>
+                        <td>07/01/24</td>
+                        <td>16:45:14</td>
+                </tr>
+                <tr>
+                    <td>173957652</td>
+                    <td>W200SUB2</td>
+                    <td>41048</td>
+                    <td>55</td>
+                    <td>CAJA</td>
+                    <td>E</td>
+                    <td>MMXPR1286</td>
+                    <td>T1</td>
+                    <td>07/01/24</td>
+                    <td>16:45:14</td>
+            </tr> <tr>
+                <td>173957652</td>
+                <td>W200SUB2</td>
+                <td>41048</td>
+                <td>55</td>
+                <td>CAJA</td>
+                <td>E</td>
+                <td>MMXPR1286</td>
+                <td>T1</td>
+                <td>07/01/24</td>
+                <td>16:45:14</td>
+        </tr>
+                </tbody>
+                </thead>
+                <tbody>
+                    <!-- Los resultados aparecerán aquí -->
+                     
+                </tbody>
+            </table>
+        </section>
+
+        <section class="report-section">
+           <button id="validate-button">Validar Datos</button> 
+           <button id="download-report">Descargar Reporte PDF</button>
+            
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Sistema de Etiquetado</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
