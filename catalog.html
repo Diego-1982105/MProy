@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogos</title>
+    <link rel="stylesheet" href="css/catalog.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Catálogos del Sistema</h1>
+        <button id="back-button">
+            <i class="fas fa-arrow-left"></i> Regresar
+        </button>
+    </header>
+
+    <div class="container">
+        <div class="tabs">
+            <button class="tab-button active" onclick="openTab(event, 'Celdas')">Celdas</button>
+            <button class="tab-button" onclick="openTab(event, 'Turnos')">Turnos</button>
+        </div>
+
+        <div id="Celdas" class="tab-content active">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>CellName</th>
+                        <th>CellDescription</th>
+                        <th>EntryDate</th>
+                        <th>MachineName</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Ejemplo de filas de datos -->
+                    <tr>
+                        <td>1</td>
+                        <td>W200SUB2</td>
+                        <td>Subensamble 2</td>
+                        <td>30/12/1899</td>
+                        <td>MMX-W2</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>W200SUB2</td>
+                        <td>Subensamble 2</td>
+                        <td>30/12/1899</td>
+                        <td>MMX-W2</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>W200SUB2</td>
+                        <td>Subensamble 2</td>
+                        <td>30/12/1899</td>
+                        <td>MMX-W2</td>
+                    </tr>
+                    <!-- Puedes agregar más filas aquí -->
+                </tbody>
+            </table>
+            <form id="cell-form">
+                <div>
+                    <label for="cell-id">ID</label>
+                    <input type="text" id="cell-id" placeholder="ID">
+                </div>
+                <div>
+                    <label for="cell-name">CellName</label>
+                    <input type="text" id="cell-name" placeholder="CellName">
+                </div>
+                <div>
+                    <label for="cell-description">Descripción</label>
+                    <input type="text" id="cell-description" placeholder="Descripción">
+                </div>
+                <button type="button" onclick="saveCell()">Guardar</button>
+            </form>
+        </div>
+
+        <div id="Turnos" class="tab-content">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Turno</th>
+                        <th>Descripción</th>
+                        <th>Hora Inicio</th>
+                        <th>Hora Final</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Ejemplo de filas de datos -->
+                    <tr>
+                        <td>1</td>
+                        <td>T1</td>
+                        <td>Turno 1</td>
+                        <td>07:00:00</td>
+                        <td>15:00:00</td>
+                    </tr>
+                    <!-- Puedes agregar más filas aquí -->
+                </tbody>
+            </table>
+            <form id="shift-form">
+                <div>
+                    <label for="turno-id">ID</label>
+                    <input type="text" id="turno-id" placeholder="ID">
+                </div>
+                <div>
+                    <label for="shift">Turno</label>
+                    <input type="text" id="shift" placeholder="Turno">
+                </div>
+                <div>
+                    <label for="shift-description">Descripción</label>
+                    <input type="text" id="shift-description" placeholder="Descripción">
+                </div>
+                <div>
+                    <label for="start-time">Hora Inicio</label>
+                    <input type="text" id="start-time" placeholder="Hora Inicio">
+                </div>
+                <div>
+                    <label for="end-time">Hora Final</label>
+                    <input type="text" id="end-time" placeholder="Hora Final">
+                </div>
+                <button type="button" onclick="saveShift()">Guardar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/catalog.js"></script>
+    
+    <footer>
+        <p>&copy; 2024 Sistema de Etiquetado</p>
+    </footer>
+</body>
+</html>
