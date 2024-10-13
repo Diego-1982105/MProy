@@ -221,3 +221,40 @@ footer {
 #back-button i {
     font-size: 18px;
 }
+.pagination {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-link {
+    margin: 0 5px;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.page-link:hover {
+    text-decoration: underline;
+}
+
+.jump-to-page {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.jump-to-page input {
+    width: 50px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.jump-to-page button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
